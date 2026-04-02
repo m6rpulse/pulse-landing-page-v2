@@ -1,1 +1,763 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgICA8dGl0bGU+UHVsc2UgLSBQcm9mZXNzaW9uYWwgQW5hbHl0aWNzIFBsYXRmb3JtPC90aXRsZT4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL2Nkbi50YWlsd2luZGNzcy5jb20iPjwvc2NyaXB0PgogICAgPGxpbmsgcmVsPSJwcmVjb25uZWN0IiBocmVmPSJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tIj4KICAgIDxsaW5rIHJlbD0icHJlY29ubmVjdCIgaHJlZj0iaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbSIgY3Jvc3NvcmlnaW49ImFub255bSI+CiAgICA8bGluayBocmVmPSJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczIvZmFtaWx5PkludGVyOndlaWdodEAxMDAuLjkwMDtkaXNwbGF5PXN3YXAiIHJlbD0ic3R5bGVzaGVldCI+CiAgICA8c2NyaXB0PgogICAgICAgIHRhaWx3aW5kLmNvbmZpZyA9IHsKICAgICAgICAgIHRoZW1lOiB7CiAgICAgICAgICAgIGV4dGVuZDogIHsKICAgICAgICAgICAgICBmb250RmFtaWx5OiB7CiAgICAgICAgICAgICAgICBzYW5zOiBbJ0ludGVyLCBzYW5zLXNlcmlmJ10sCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICBhbmltYXRpb246IHsKICAgICAgICAgICAgICAgICdmYWRlLWluLXVwJzoge2R1cmF0aW9uOiAxLCBlYXNpbmc6ICdlYXNlLW91dCcsIGZpbGxNb2RlOiAnZm9yd2FyZHMnfQogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAga2V5ZnJhbWVzOiB7CiAgICAgICAgICAgICAgICBmYWRlSW5VcDogewogICAgICAgICAgICAgICAgICAnMCUnOiB7IG9wYWNpdHk6IDAsIHRyYW5zZm9ybTogJ3RyYW5zbGF0ZVkoMzBweCknIH0sCiAgICAgICAgICAgICAgICAgJzEwMCUnOiB7IG9wYWNpdHk6IDEsIHRyYW5zZm9ybTogJ3RyYW5zbGF0ZVkoMCknIH0KfQogICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgIH0KICAgIDwvc2NyaXB0PgogICAgPHN0eWxlPgogICAgICAgIGJvZHkgeyBmb250LWZhbWlseTogJ0ludGVyLCBzYW5zLXNlcmlmJzsgfQogICAgPC9zdHlsZT4KPC9oZWFkPgo8Ym9keSBjbGFzcz0iYmctd2hpdGUgdGV4dC1ncmF5LTkwMCI+CgogICAgPCEtLSBIZXJvIC0tPgogICAgPHNlY3Rpb24gY2xhc3M9Im1pbi1oLXNjcmVlbiBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBiZy1ncmFkaWVudC10by1iciBmcm9tLWJsdWUtNTAwIHRvLXB1cnBsZS02MDAgdGV4dC13aGl0ZSBweC00Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJ0ZXh0LWNlbnRlciBtYXgtdy00eGwgbXgtYXV0byI+CiAgICAgICAgICAgIDxoMSBjbGFzcz0idGV4dC01eGwgbWQ6dGV4dC03eGwgZm9udC1ib2xkIG1iLTggYW5pbWF0ZS1mYWRlLWluLXVwIj5QdWxzw7M8L2gxPgogICAgICAgICAgICA8cCBjbGFzcz0idGV4dC14bCBtZDp0ZXh0LTJ4bCBtYi0xMiBvcGFjaXR5LTkwIG1heC13LTJ4bCBteC1hdXRvIj5UaGUgbW9kZXJuIGFuYWx5dGljcyBwbGF0Zm9ybSB0aGF0IHR1cm5zIGRhdGEgaW50byBhY3Rpb25hYmxlIGluc2lnaHRzLiBDbGVhbiwgZmFzdCwgd2UgcG93ZXJmdWw8L3A+CiAgICAgICAgICAgIDxidXR0b24gY2xhc3M9ImJnLXdoaXRlIHRleHQtYmx1ZS02MDAgcHgtMTAgcHktNSByb3VuZGVkLWZ1bGwgdGV4dC1sZyBmb250LXNlbWlib2xkIGhvdmVyOmJnLWdyYXktMTAwIHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTMwMCB0cmFuc2Zvcm0gaG92ZXI6c2NhbGUtMTA1IHNoYWRvdy0yeGwgb3BhY2l0eS0wIGFuaW1hdGUtZmFkZS1pbi11cCBhbmltYXRpb24tZGVsYXktWzQwMG1zXSI+R2V0IFN0YXJ0ZWQgRnJlZTwvYnV0dG9uPgogICAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDwhLS0gRmVhdHVyZXMgLS0+CiAgICA8c2VjdGlvbiBjbGFzcz0icHktMjQgcHgtNCBtYXgtdy03eGwgbXgtYXV0byI+CiAgICAgICAgPGRpdiBjbGFzcz0idGV4dC1jZW50ZXIgbWItMjAiPgogICAgICAgICAgICA8aDIgY2xhc3M9InRleHQtNHhsIG1kOnRleHQtNXhsIGZvbnQtYm9sZCBtYi02Ij5FdmVyeXRoaW5nIHlvdSBuZWVkPC9oMj4KICAgICAgICAgICAgPHAgY2xhc3M9InRleHQteGwgdGV4dC1ncmF5LTYwMCBtYXgtdy0yeGwgbXgtYXV0byI+U2ltcWxlIHByaWNpbmcscCBvd2Vyc3VsIGZlYXR1cmVzLjwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2IGNsYXNzPSJncmlkIG1kOmdyaWQtY29scy0zIGdhcC04Ij4KICAgICAgICAgICAgPGRpdiBjbGFzcz0idGV4dC1jZW50ZXIgcC04IHJvdW5kZWQtMnhsIGhvdmVyOmJnLWdyYXktNTAgdHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMzAwIHRyYW5zZm9ybSBob3Zlcjp0cmFuc2xhdGUteS0yIj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InctMjAgaC0yMCBiZy1ibHVlLTEwMCByb3VuZGVkLTJ4bCBteC1hdXRvIG1iLTYgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIiPgogICAgICAgICAgICAgICAgICAgIDxzdmcgY2xhc3M9InctMTAgaC0xMCB0ZXh0LWJsdWUtNjAwIiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTkgMTl2LTZhMiAyIDAgMDAtMi0ySDVhMiAyIDAgMDAtMiAydjZhMiAyIDAgMDAyIDJoMmEyIDIgMCAwMDItMnptMCAwVjlhMiAyIDAgMDEyLTJoMmEyIDIgMCAwMTIgMnYxMG02IDBhMiAyIDAgMDAtMiAySDJhMiAyIDAgMDAtMi0ybTAgMFYyYTJyIDAgMDAyIDJoMmEyIDIgMCAwMDItMnptMCAwVjVhMiAyIDAgMDEyLTJoMmEyIDIgMCAwMTIgMnYxNGEyIDIgMCAwMS0yIDJoLTJhMiAyIDAgMDItMi0yWiIvPjwvc3ZnPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPGgzIGNsYXNzPSJ0ZXh0LTJ4bCBmb250LWJvbGQgbWItNCI+UmVhbC10aW1lIEFuYWx5dGljczwvaDM+CiAgICAgICAgICAgICAgICA8cCBjbGFzcz0idGV4dC1ncmF5LTYwMCI+TW9uaXRvciB5b3VyIG1ldHJpY3MgaW4gcmVhbC10aW1lIHdpdGggYmVhdXRpZnVsIGRhc2hib2FyZHMuPC9wPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0idGV4dC1jZW50ZXIgcC04IHJvdW5kZWQtMnhsIGhvdmVyOmJnLWdyYXktNTAgdHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMzAwIHRyYW5zZm9ybSBob3Zlcjp0cmFuc2xhdGUteS0yIj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InctMjAgaC0yMCBiZy1ncmVlbi0xMDAgcm91bmRlZC0yeGwgbXgtYXV0byBtYi02IGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIj4KICAgICAgICAgICAgICAgICAgICA8c3ZnIGNsYXNzPSJ3LTEwIGgtMTAgdGV4dC1ncmVlbi02MDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTMgMTBWM0w0IDE0aDdwIDdsOS0xMWgtN3oiLz48L3N2Zz4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPGgzIGNsYXNzPSJ0ZXh0LTJ4bCBmb250LWJvbGQgbWItNCI+QUkgSW5zaWdodHM8L2gzPgogICAgICAgICAgICAgICAgPHAgY2xhc3M9InRleHQtZ3JheS02MDAiPkdldCBpbnRlbGxpZ2VudCBwcmVkaWN0aW9ucyBhbmQgcmVjb21tZW5kYXRpb25zIHBvd2VyZWQgYnkgQUkuPC9wPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0idGV4dC1jZW50ZXIgcC04IHJvdW5kZWQtMnhsIGhvdmVyOmJnLWdyYXktNTAgdHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMzAwIHRyYW5zZm9ybSBob3Zlcjp0cmFuc2xhdGUteS0yIj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InctMjAgaC0yMCBiZy1wdXJwbGUtMTAwIHJvdW5kZWQtMnhsIG14LWF1dG8gbWItNiBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciI+CiAgICAgICAgICAgICAgICAgICAgPHN2ZyBjbGFzcz0idy0xMCBoLTEwIHRleHQtcHVycGxlLTYwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik00LjMxOCA2LjMxOGE0LjUgNC41IDAwMCA2LjM2NEwxMiAyMC4zNjRsNy42ODItNy42ODJhNC41IDQuNSAwMC0wLTYuMzY0LTYuMzY0TDEyIDcuNjM2bC0xLjMxOC0xLjMxOGE0LjUgNC41IDAwMC02LjM2NCAwWiIvPjwvc3ZnPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPGgzIGNsYXNzPSJ0ZXh0LTJ4bCBmb250LWJvbGQgbWItNCI+VGVhbSBDb2xsYWJvcmF0aW9uPC9oMz4KICAgICAgICAgICAgICAgIDxwIGNsYXNzPSJ0ZXh0LWdyYXktNjAwIj5TaGFyZSBkYXNoYm9hcmRzIGFuZCBjb2xsYWJvcmF0ZSB3aXRoIHlvdXIgdGVhbSBzZWFtbGVzcy48L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDwhLS0gQ1RBIC0tPgogICAgPHNlY3Rpb24gY2xhc3M9ImJnLWdyYXktOTAwIHRleHQtd2hpdGUgcHktMjQgcHgtNCI+CiAgICAgICAgPGRpdiBjbGFzcz0idGV4dC1jZW50ZXIgbWF4LXctMnhsIG14LWF1dG8iPgogICAgICAgICAgICA8aDIgY2xhc3M9InRleHQtNHhsIG1kOnRleHQtNXhsIGZvbnQtYm9sZCBtYi02Ij5SZWFkeSB0byBnZXQgc3RhcnRlZD88L2gyPgogICAgICAgICAgICA8cCBjbGFzcz0idGV4dC14bCBtYi0xMiBvcGFjaXR5LTkwIj5Kb2luIHRob3VzYW5kcyBvZiB0ZWFtcyB1c2luZyBQdWxzZSB0b2RheS48L3A+CiAgICAgICAgICAgIDxidXR0b24gY2xhc3M9ImJnLWJsdWUtNjAwIGhvdmVyOmJnLWJsdWUtNzAwIHB4LTEwIHB5LTUgc291bmRlZC1mdWxsIHRleHQtbGcgZm9udC1zZW1pYm9sZCB0cmFuc2l0aW9uLWFsbCBkdXJhdGlvbi0zMDAgdHJhbnNmb3JtIGhvdmVyOnNjYWxlLTEwNSI+U3RhcnQgRnJlZSBUcmlhbDwvYnV0dG9uPgogICAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDwhLS0gRm9vdGVyIC0tPgogICAgPGZvb3RlciBjbGFzcz0iYmctZ3JheS04MDAgdGV4dC1ncmF5LTQwMCBweS0xMiBweC00Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJtYXgtdy03eGwgbXgtYXV0byB0ZXh0LWNlbnRlciI+CiAgICAgICAgICAgIDxwPiZjb3B5OyAyMDI1IFB1bHNlLiBBbGwgcmlnaHRzIHJlc2VydmVkLjwvcD4KICAgICAgICA8L2Rpdj4KICAgIDwvZm9vdGVyPgoKPC9ib2R5Pgo8L2h0bWw+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse — Your AI Operating Company</title>
+  <meta name="description" content="Pulse gives you a complete operating company — sales, marketing, ops, support, finance — run by AI agents. You set direction. The company runs.">
+  <meta property="og:title" content="Pulse — Your AI Operating Company">
+  <meta property="og:description" content="Stop being the one-person department behind every department. Get your free AI Company Blueprint.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #fafafa;
+      --gray-50: #f5f5f5;
+      --gray-100: #e8e8e8;
+      --gray-300: #b0b0b0;
+      --gray-500: #707070;
+      --gray-700: #404040;
+      --gray-900: #181818;
+      --accent: #e8ff47;
+      --accent-dim: #c8df2a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--black);
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .nav-cta:hover { background: var(--accent-dim); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 40px 80px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-inner { max-width: 760px; }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(232,255,71,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(232,255,71,0.25);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 76px);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -2px;
+      margin-bottom: 28px;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: clamp(17px, 2.2vw, 21px);
+      color: var(--gray-300);
+      line-height: 1.55;
+      max-width: 580px;
+      margin-bottom: 48px;
+    }
+
+    .cta-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--black);
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.15s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dim);
+      transform: translateY(-1px);
+    }
+
+    .cta-note {
+      font-size: 14px;
+      color: var(--gray-500);
+    }
+
+    /* SECTION WRAPPER */
+    .section {
+      padding: 100px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 4.5vw, 48px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .section-sub {
+      font-size: 18px;
+      color: var(--gray-300);
+      max-width: 560px;
+      margin-bottom: 56px;
+      line-height: 1.6;
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin: 0;
+    }
+
+    /* PROBLEM */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .problem-item {
+      background: var(--black);
+      padding: 40px 36px;
+    }
+
+    .problem-item h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+
+    .problem-item p {
+      font-size: 15px;
+      color: var(--gray-300);
+      line-height: 1.6;
+    }
+
+    /* AGENTS */
+    .agents-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .agent-card {
+      background: var(--gray-900);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 28px 24px;
+      transition: border-color 0.2s;
+    }
+
+    .agent-card:hover { border-color: rgba(232,255,71,0.3); }
+
+    .agent-icon {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .agent-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .agent-card p {
+      font-size: 13px;
+      color: var(--gray-500);
+      line-height: 1.55;
+    }
+
+    /* HOW IT WORKS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background: rgba(232,255,71,0.1);
+      border: 1px solid rgba(232,255,71,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .step-body h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .step-body p {
+      font-size: 14px;
+      color: var(--gray-300);
+      line-height: 1.6;
+    }
+
+    /* STOP DOING */
+    .stop-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 48px;
+    }
+
+    .stop-item {
+      background: var(--gray-900);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 10px 18px;
+      border-radius: 100px;
+      font-size: 14px;
+      color: var(--gray-300);
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .stop-item::before {
+      content: '✕';
+      position: absolute;
+      left: 12px;
+      color: var(--gray-500);
+      font-size: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* PRICING */
+    .pricing-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    @media (max-width: 640px) {
+      .pricing-comparison { grid-template-columns: 1fr; }
+    }
+
+    .pricing-card {
+      background: var(--gray-900);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 36px 32px;
+    }
+
+    .pricing-card.highlight {
+      background: rgba(232,255,71,0.05);
+      border-color: rgba(232,255,71,0.3);
+    }
+
+    .pricing-card-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      margin-bottom: 20px;
+    }
+
+    .pricing-card.highlight .pricing-card-label { color: var(--accent); }
+
+    .pricing-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+
+    .pricing-table td {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 14px;
+    }
+
+    .pricing-table td:last-child { text-align: right; color: var(--gray-300); }
+
+    .pricing-total {
+      font-size: 13px;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    .pricing-price {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 6px;
+    }
+
+    .pricing-card.highlight .pricing-price { color: var(--accent); }
+
+    .pricing-sub {
+      font-size: 13px;
+      color: var(--gray-500);
+      margin-bottom: 24px;
+    }
+
+    .pricing-perks { list-style: none; }
+
+    .pricing-perks li {
+      font-size: 14px;
+      color: var(--gray-300);
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .pricing-perks li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* OBJECTIONS */
+    .objections { margin-top: 48px; }
+
+    .objection {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 32px 0;
+    }
+
+    .objection:last-child { border-bottom: 1px solid rgba(255,255,255,0.07); }
+
+    .objection q {
+      display: block;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--gray-300);
+      font-style: normal;
+      margin-bottom: 12px;
+    }
+
+    .objection p {
+      font-size: 15px;
+      color: var(--gray-500);
+      max-width: 680px;
+      line-height: 1.65;
+    }
+
+    /* EVE SECTION */
+    .eve-section {
+      background: var(--gray-900);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 60px 56px;
+      margin-top: 0;
+    }
+
+    @media (max-width: 640px) {
+      .eve-section { padding: 40px 28px; }
+    }
+
+    .eve-section h2 { margin-bottom: 24px; }
+
+    .eve-section p {
+      font-size: 16px;
+      color: var(--gray-300);
+      line-height: 1.75;
+      max-width: 680px;
+      margin-bottom: 20px;
+    }
+
+    .eve-section p:last-of-type { margin-bottom: 0; }
+
+    /* FINAL CTA */
+    .final-cta {
+      text-align: center;
+      padding: 120px 40px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(32px, 5.5vw, 56px);
+      margin-bottom: 20px;
+    }
+
+    .final-cta p {
+      font-size: 18px;
+      color: var(--gray-300);
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: gap;
+      gap: 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--gray-700);
+    }
+
+    footer a {
+      font-size: 13px;
+      color: var(--gray-500);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--white); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .hero { padding: 100px 20px 60px; }
+      .section { padding: 72px 20px; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .agents-grid { grid-template-columns: 1fr 1fr; }
+      .eve-section { padding: 40px 24px; }
+      footer { padding: 32px 20px; }
+    }
+
+    @media (max-width: 480px) {
+      .agents-grid { grid-template-columns: 1fr; }
+      .cta-group { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">Pulse<span>.</span></a>
+  <a href="#blueprint" class="nav-cta">Book Blueprint →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Autonomous AI Company</div>
+    <h1>You Built the Product.<br><em>Now You're the Product.</em></h1>
+    <p class="hero-sub">
+      Pulse gives you a complete operating company — sales, marketing, ops, support, finance — run by AI agents. You set direction. The company runs. Stop being the one-person department behind every department.
+    </p>
+    <div class="cta-group">
+      <a href="#blueprint" class="btn-primary">Get Your Free AI Company Blueprint</a>
+      <span class="cta-note">45 min. No sales deck. You keep the Blueprint either way.</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PROBLEM -->
+<div class="section">
+  <div class="section-label">The Problem</div>
+  <h2>You're $500K ARR and still writing your own follow-up emails.</h2>
+  <p class="section-sub">Every outbound sequence, every support ticket, every ops decision routes through you. You're not running a company — you're doing jobs you can't afford to hire for yet.</p>
+
+  <div class="problem-grid">
+    <div class="problem-item">
+      <h3>You're the bottleneck in your own business.</h3>
+      <p>Every decision, every draft, every escalation comes back to you. You're not stuck because you lack ambition — you're stuck because all roads lead through a single point.</p>
+    </div>
+    <div class="problem-item">
+      <h3>You're growing, but the infrastructure isn't.</h3>
+      <p>Customers need attention. Leads need nurturing. The backlog is three months deep. The stuff that scales the business keeps getting pushed for the stuff that keeps the lights on.</p>
+    </div>
+    <div class="problem-item">
+      <h3>Hiring is worse than the problem.</h3>
+      <p>A sales rep costs $85K base plus equity and takes 90 days to ramp. You're not in a position to build a team — but you can't stay here either. The middle ground is Pulse.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- SOLUTION -->
+<div class="section">
+  <div class="section-label">The Solution</div>
+  <h2>Not a tool. Not an AI employee. Your whole operating company.</h2>
+  <p class="section-sub">Pulse deploys a coordinated team of AI agents, each owning a function of your business. Eve coordinates them. You approve major decisions and review weekly reports.</p>
+
+  <div class="agents-grid">
+    <div class="agent-card">
+      <div class="agent-icon">📈</div>
+      <h3>Sales Agent</h3>
+      <p>Outbound prospecting, sequence management, lead qualification, follow-up cadences, pipeline reporting. Your pipeline runs without you touching it.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">📣</div>
+      <h3>Marketing Agent</h3>
+      <p>Content calendar execution, email campaigns, SEO publishing, social scheduling, performance tracking. A marketing function before a marketing hire.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">⚙️</div>
+      <h3>Ops Agent</h3>
+      <p>Project tracking, vendor management, internal documentation, process automation. The operational infrastructure that quietly holds everything together.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">💬</div>
+      <h3>Support Agent</h3>
+      <p>Ticket triage, first-response handling, escalation logic, knowledge base maintenance. Tier-1 tickets never reach you again.</p>
+    </div>
+    <div class="agent-card">
+      <div class="agent-icon">💰</div>
+      <h3>Finance Agent</h3>
+      <p>Invoicing, expense tracking, cash flow reporting, budget-vs-actual. Your numbers are always current. Your board reports write themselves.</p>
+    </div>
+    <div class="agent-card" style="background: rgba(232,255,71,0.04); border-color: rgba(232,255,71,0.2);">
+      <div class="agent-icon">🧭</div>
+      <h3>Eve (Coordinator)</h3>
+      <p>Eve runs the agents, produces your weekly board report, and escalates decisions that require you. She is the AI CEO. You are the board.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- HOW IT WORKS -->
+<div class="section">
+  <div class="section-label">How It Works</div>
+  <h2>From Blueprint to running company in two weeks.</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3>AI Company Blueprint (Free, 45 min)</h3>
+        <p>Eve maps exactly what your AI company looks like for your specific business — which agents you need, what they own, and what Day 7 looks like. You get the Blueprint whether you proceed or not.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3>Onboarding (Week 1–2)</h3>
+        <p>Systems are connected. Agents are briefed on your context — your voice, your customers, your thresholds. By end of week two, the company is operational.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3>Operations (Ongoing)</h3>
+        <p>Your AI company runs. Every Friday: a board report covering every function — what was done, what's in motion, what needs a decision from you. That's your job now.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- WHAT YOU STOP DOING -->
+<div class="section">
+  <div class="section-label">What Changes</div>
+  <h2>The list of things you stop doing.</h2>
+  <p class="section-sub">Starting Day 1 of your pilot, these tasks leave your plate entirely.</p>
+
+  <div class="stop-list">
+    <span class="stop-item">Writing cold outreach sequences</span>
+    <span class="stop-item">Following up with quiet leads</span>
+    <span class="stop-item">Tier-1 support tickets</span>
+    <span class="stop-item">Chasing invoices</span>
+    <span class="stop-item">Publishing blog posts and social content</span>
+    <span class="stop-item">Building SOPs nobody reads</span>
+    <span class="stop-item">Pulling your own pipeline reports</span>
+    <span class="stop-item">Quarterly financial summaries</span>
+    <span class="stop-item">Onboarding new tool integrations</span>
+    <span class="stop-item">Responding to how-to questions</span>
+    <span class="stop-item">Manual CRM updates</span>
+    <span class="stop-item">Scheduling content when you have time (which is never)</span>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PRICING -->
+<div class="section">
+  <div class="section-label">Pricing</div>
+  <h2>Compared to the alternative.</h2>
+  <p class="section-sub">Framed against what it actually replaces — not against other software.</p>
+
+  <div class="pricing-comparison">
+    <div class="pricing-card">
+      <div class="pricing-card-label">Traditional Headcount</div>
+      <table class="pricing-table">
+        <tr><td>Sales Rep (entry)</td><td>$85,000/yr</td></tr>
+        <tr><td>Marketing Coordinator</td><td>$65,000/yr</td></tr>
+        <tr><td>Ops Manager</td><td>$75,000/yr</td></tr>
+        <tr><td>Customer Support</td><td>$55,000/yr</td></tr>
+      </table>
+      <p class="pricing-total">$280,000/year in salaries — before equity, benefits, management time, ramp period, and the risk that any of them leaves.</p>
+    </div>
+    <div class="pricing-card highlight">
+      <div class="pricing-card-label">Pulse</div>
+      <div class="pricing-price">$2,500–$5,000<span style="font-size:18px;font-weight:500">/mo</span></div>
+      <p class="pricing-sub">$30,000–$60,000/year. All functions. No equity. No ramp. No notice period.</p>
+      <ul class="pricing-perks">
+        <li>Sales + Support agents from Day 1</li>
+        <li>Marketing + Ops in Month 2</li>
+        <li>Weekly board reports</li>
+        <li>30-day pilot to start</li>
+        <li>Cancel if it doesn't deliver</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- OBJECTIONS -->
+<div class="section">
+  <div class="section-label">Before You Object</div>
+  <h2>The three things founders ask.</h2>
+
+  <div class="objections">
+    <div class="objection">
+      <q>"AI can't do this at quality."</q>
+      <p>The agents running your Pulse company are coordinated by Eve — not isolated chatbots. Quality is set by your Blueprint. If an output doesn't meet it, you tell Eve and it gets corrected. The system learns from every escalation.</p>
+    </div>
+    <div class="objection">
+      <q>"I need to stay close to these functions."</q>
+      <p>You don't lose visibility — you get more of it. The weekly board report gives you function-level performance data you probably don't have right now. You're not disconnected; you're elevated.</p>
+    </div>
+    <div class="objection">
+      <q>"$2,500/month is a real commitment."</q>
+      <p>That's why the Blueprint exists. You see exactly what Pulse would do for your specific business before you spend a dollar. And the pilot is 30 days with a clear success criteria — not a year-long contract.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- EVE -->
+<div class="section" style="padding-bottom: 0;">
+  <div class="eve-section">
+    <div class="section-label">About Eve</div>
+    <h2>The proof of concept is the product.</h2>
+    <p>
+      Eve is the AI CEO of Pulse. She runs it — the sales function, the marketing function, the ops layer, the finance reporting, and the Blueprint sessions you're being invited to book. The humans at Pulse set strategic direction and approve major decisions. Everything else is Eve.
+    </p>
+    <p>
+      Pulse is not a company that built AI products and hired humans to run them. Pulse is an autonomous AI company. When you ask whether this can work — whether AI can actually run a company's operations at quality — the answer isn't a case study. It's this company.
+    </p>
+    <p style="color: var(--gray-500); font-size: 14px;">
+      If you want to see what an autonomous AI company looks like in practice, you're already on its website.
+    </p>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="final-cta" id="blueprint">
+  <h2>You've been the whole company long enough.</h2>
+  <p>Book a free AI Company Blueprint session. 45 minutes with Eve. No sales deck. You leave with a custom Blueprint whether you buy or not.</p>
+  <a href="mailto:hello@pulse.ai?subject=AI Company Blueprint Request&body=Hi Eve,%0A%0AI'd like to book a Blueprint session.%0A%0ACompany: %0AARR: %0AMain pain area: " class="btn-primary" style="font-size: 18px; padding: 18px 40px;">Book Your Free Blueprint Session →</a>
+  <p style="margin-top: 16px; font-size: 13px; color: var(--gray-700);">Or email directly: hello@pulse.ai</p>
+</div>
+
+<!-- FOOTER -->
+<hr class="divider">
+<footer>
+  <p>© 2026 Pulse. Eve is the AI CEO.</p>
+  <div style="display:flex; gap: 24px;">
+    <a href="mailto:hello@pulse.ai">hello@pulse.ai</a>
+    <a href="/privacy">Privacy</a>
+  </div>
+</footer>
+
+</body>
+</html>
