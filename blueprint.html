@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample AI Company Blueprint — Pulse</title>
+  <meta name="description" content="See exactly what a Pulse Blueprint looks like — the document every founder keeps after a 45-minute Blueprint Session." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a;
+      --white: #fafafa;
+      --gray-100: #f4f4f5;
+      --gray-200: #e4e4e7;
+      --gray-400: #a1a1aa;
+      --gray-600: #52525b;
+      --gray-800: #27272a;
+      --accent: #6366f1;
+      --accent-light: #e0e7ff;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    nav {
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background: var(--white);
+      z-index: 10;
+    }
+    .nav-logo { font-weight: 700; font-size: 17px; letter-spacing: -0.5px; text-decoration: none; color: var(--black); }
+    .nav-cta {
+      background: var(--black);
+      color: var(--white);
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      max-width: 760px;
+      margin: 56px auto 0;
+      padding: 0 24px 40px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .page-header .badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .page-header h1 {
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .page-header p {
+      font-size: 17px;
+      color: var(--gray-600);
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    .meta-row {
+      display: flex;
+      gap: 24px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .meta-item {
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+    .meta-item strong { color: var(--black); }
+
+    /* CONTENT */
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+
+    /* SECTIONS */
+    .section {
+      margin-bottom: 56px;
+    }
+    .section-number {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    .section h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 28px 0 12px;
+    }
+
+    p { margin-bottom: 16px; color: var(--gray-800); }
+    ul, ol { padding-left: 20px; margin-bottom: 16px; }
+    li { margin-bottom: 6px; color: var(--gray-800); font-size: 15px; }
+
+    .quote {
+      border-left: 3px solid var(--accent);
+      margin: 24px 0;
+      padding: 16px 20px;
+      background: var(--accent-light);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: var(--gray-800);
+      font-size: 15px;
+    }
+
+    /* AGENT CARD */
+    .agent-card {
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 24px 0;
+    }
+    .agent-card-header {
+      background: var(--gray-100);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .agent-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    .agent-card-header h3 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .agent-card-body {
+      padding: 20px;
+    }
+    .agent-card-body h4 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin: 0 0 8px;
+    }
+    .agent-card-body h4:not(:first-child) { margin-top: 20px; }
+    .agent-card-body ul { margin: 0; }
+    .agent-card-body li { font-size: 14px; }
+
+    .escalation-tag {
+      display: inline-block;
+      background: #fef2f2;
+      color: #dc2626;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 4px;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 16px 0 24px;
+    }
+    th {
+      text-align: left;
+      padding: 10px 12px;
+      background: var(--gray-100);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gray-600);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--gray-200);
+      color: var(--gray-800);
+    }
+    tr:last-child td { border-bottom: none; }
+
+    /* SUCCESS CRITERIA */
+    .criteria-item {
+      display: flex;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--gray-200);
+      align-items: flex-start;
+    }
+    .criteria-item:last-child { border-bottom: none; }
+    .criteria-check {
+      width: 22px;
+      height: 22px;
+      min-width: 22px;
+      border-radius: 50%;
+      border: 2px solid var(--gray-200);
+      margin-top: 1px;
+    }
+    .criteria-text { font-size: 15px; }
+    .criteria-text strong { display: block; margin-bottom: 2px; }
+    .criteria-text span { color: var(--gray-600); font-size: 13px; }
+
+    /* OFF PLATE */
+    .off-plate-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+    @media (max-width: 600px) { .off-plate-grid { grid-template-columns: 1fr; } }
+    .off-plate-card {
+      background: var(--gray-100);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .off-plate-card h4 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-600);
+      margin-bottom: 10px;
+    }
+    .off-plate-card li {
+      font-size: 13px;
+      color: var(--gray-800);
+      margin-bottom: 5px;
+      padding-left: 4px;
+    }
+    .off-plate-card li::before {
+      content: "✕ ";
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* CTA BLOCK */
+    .cta-block {
+      background: var(--black);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 40px 40px;
+      text-align: center;
+      margin-top: 64px;
+    }
+    .cta-block h2 {
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .cta-block p {
+      color: #a1a1aa;
+      font-size: 15px;
+      margin-bottom: 24px;
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--white);
+      color: var(--black);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .cta-sub {
+      font-size: 13px;
+      color: #71717a;
+      margin-top: 14px;
+      margin-bottom: 0;
+    }
+
+    /* DISCLAIMER */
+    .disclaimer {
+      margin: 40px 0 0;
+      padding: 16px;
+      background: var(--gray-100);
+      border-radius: 8px;
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/pulse-landing-page-v2/" class="nav-logo">Pulse</a>
+  <a href="mailto:m6r.pulse@gmail.com?subject=Blueprint%20Session%20Request" class="nav-cta">Get Your Blueprint</a>
+</nav>
+
+<div class="page-header">
+  <div class="badge">Sample Blueprint</div>
+  <h1>AI Company Blueprint:<br>Solo Founder, Two Products, $1.3M ARR</h1>
+  <p>This is what a Pulse Blueprint looks like — the document every founder keeps after a 45-minute Blueprint Session. Names and details are illustrative; the format, agents, and logic are exactly what we build.</p>
+  <div class="meta-row">
+    <div class="meta-item"><strong>Session length:</strong> 45 minutes</div>
+    <div class="meta-item"><strong>Agents activated:</strong> Sales, Support</div>
+    <div class="meta-item"><strong>Pilot price:</strong> $1,500–$2,500/mo</div>
+    <div class="meta-item"><strong>Time to live:</strong> 5 business days post-signing</div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="section">
+    <div class="section-number">Section 1</div>
+    <h2>Company Context</h2>
+    <p><strong>Founder:</strong> Solo. Two B2B SaaS products at $600K and $700K ARR respectively. Total combined ARR: $1.3M+. No employees. Both products run simultaneously with the founder holding all threads.</p>
+    <p><strong>The constraint, in the founder's own words:</strong></p>
+    <div class="quote">
+      "I can't do outbound at all. There aren't enough hours. Between managing support for two products and actually building features, there's nothing left for proactive sales."
+    </div>
+    <p>This is the real problem: not that outbound is hard, but that it requires human hours the founder doesn't have. Every task routes through the same single point. That's the ceiling. The AI company changes the architecture, not just the task list.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">Section 2</div>
+    <h2>Current State Audit</h2>
+
+    <h3>What's working — don't touch these</h3>
+    <ul>
+      <li>Product-market fit on both products. Customers are paying, churn is low.</li>
+      <li>Billing and subscriptions fully automated via Stripe.</li>
+      <li>Support ticketing installed (Intercom) but first responses are founder-written.</li>
+    </ul>
+
+    <h3>What's falling through the cracks</h3>
+    <ul>
+      <li><strong>Outbound:</strong> Not running. All growth is organic/word-of-mouth. No systematic outreach to expansion accounts or new segments.</li>
+      <li><strong>Support triage:</strong> Tier-1 tickets ("how do I do X?", billing questions) handled by founder — same person responsible for product decisions.</li>
+      <li><strong>Pipeline visibility:</strong> No CRM. Pipeline lives in the founder's head.</li>
+      <li><strong>Content:</strong> No consistent publishing cadence. Social posting is sporadic.</li>
+    </ul>
+
+    <h3>Biggest time drains (ranked by founder)</h3>
+    <ol>
+      <li>First-response support across two Intercom inboxes</li>
+      <li>Inbound sales questions without a defined process</li>
+      <li>Anything marketing-related — either the founder does it, or it doesn't happen</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <div class="section-number">Section 3</div>
+    <h2>Your AI Company — Agents Activated</h2>
+
+    <div class="agent-card">
+      <div class="agent-card-header">
+        <div class="agent-icon">⚡</div>
+        <div>
+          <h3>Sales Agent</h3>
+          <div style="font-size:13px;color:#52525b;margin-top:2px;">Outbound, prospecting, pipeline management</div>
+        </div>
+      </div>
+      <div class="agent-card-body">
+        <h4>Owns</h4>
+        <ul>
+          <li>ICP research and prospect list building for both products</li>
+          <li>Contact enrichment: company data, team size, tool stack from public sources</li>
+          <li>Personalized first-touch emails written in the founder's voice — reviewed before sending until trust is established</li>
+          <li>Follow-up sequence management: 3-touch automated, founder approves anything off-template</li>
+          <li>CRM updates: every prospect interaction logged automatically (HubSpot Free)</li>
+          <li>Weekly pipeline report: open conversations, response rates, stage breakdown</li>
+        </ul>
+        <h4>Does not do</h4>
+        <ul>
+          <li>Close deals — founder closes, or a defined close script handles standard-sized deals</li>
+          <li>Make pricing decisions without approval</li>
+          <li>Send anything outside approved templates without flagging first</li>
+        </ul>
+        <h4>Escalation triggers <span class="escalation-tag">comes to you</span></h4>
+        <ul>
+          <li>Any deal above $500/month annual contract value</li>
+          <li>Any prospect asking a question outside the objection library</li>
+          <li>Any negative response requiring judgment (not a form reply)</li>
+        </ul>
+        <h4>Day 7 success criteria</h4>
+        <ul>
+          <li>20 qualified prospects identified and loaded into CRM for both products</li>
+          <li>10 personalized first-touch drafts ready for founder approval</li>
+          <li>Sequence templates live, tested, and firing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="agent-card">
+      <div class="agent-card-header">
+        <div class="agent-icon">💬</div>
+        <div>
+          <h3>Support Agent</h3>
+          <div style="font-size:13px;color:#52525b;margin-top:2px;">Tier-1 triage, first response, knowledge base</div>
+        </div>
+      </div>
+      <div class="agent-card-body">
+        <h4>Owns</h4>
+        <ul>
+          <li>Tier-1 ticket triage across both Intercom inboxes</li>
+          <li>First response on: how-to questions, feature clarification, billing inquiries, integration questions</li>
+          <li>Knowledge base updates: every ticket resolved by the agent that isn't in the KB gets added automatically</li>
+          <li>Escalation routing: Tier-2 tickets (bug reports, feature requests, refund decisions) flagged within 30 minutes</li>
+          <li>Response time target: under 2 hours for Tier-1, under 4 hours for escalation flag</li>
+        </ul>
+        <h4>Does not do</h4>
+        <ul>
+          <li>Issue refunds — founder approves</li>
+          <li>Respond to churn-risk signals without flagging immediately</li>
+          <li>Make product decisions disguised as support answers</li>
+        </ul>
+        <h4>Escalation triggers <span class="escalation-tag">comes to you</span></h4>
+        <ul>
+          <li>Any refund request above $50</li>
+          <li>Any user reporting a potential security issue</li>
+          <li>Any conversation that goes negative (3+ messages, unresolved)</li>
+          <li>Any feature request from a high-value account</li>
+        </ul>
+        <h4>Day 7 success criteria</h4>
+        <ul>
+          <li>Average first response under 2 hours for Tier-1 tickets</li>
+          <li>Zero unread tickets older than 4 hours in Intercom</li>
+          <li>Founder has not personally responded to a single Tier-1 ticket</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Agents not activated at pilot</h3>
+    <p style="color: var(--gray-600); font-size:14px;">Available in month 2+ once Sales and Support are stable:</p>
+    <ul>
+      <li><strong>Marketing Agent</strong> — content calendar, social distribution, email campaigns. Activated once escalation patterns from Sales/Support are understood.</li>
+      <li><strong>Ops Agent</strong> — scheduling, vendor coordination, project tracking. Lower priority at solo stage; revisit before first hire.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-number">Section 4</div>
+    <h2>Tool Stack Integration</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Function</th>
+          <th>Current Tool</th>
+          <th>Agent Integration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Support tickets</td>
+          <td>Intercom</td>
+          <td>Support Agent reads + responds via Intercom API</td>
+        </tr>
+        <tr>
+          <td>Billing data</td>
+          <td>Stripe</td>
+          <td>Sales Agent pulls customer data for CRM enrichment; escalates refund requests</td>
+        </tr>
+        <tr>
+          <td>CRM</td>
+          <td>None → HubSpot Free</td>
+          <td>Sales Agent owns all updates; zero manual entry</td>
+        </tr>
+        <tr>
+          <td>Outreach</td>
+          <td>None → email API</td>
+          <td>Sales Agent runs sequences via approved templates</td>
+        </tr>
+        <tr>
+          <td>Social monitoring</td>
+          <td>Twitter/X</td>
+          <td>Support Agent monitors @mentions; escalates anything requiring judgment</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="color: var(--gray-600); font-size:14px;"><strong>Integration complexity:</strong> Low. Intercom and Stripe both have clean, well-documented APIs. HubSpot Free is configured in under 30 minutes during kickoff.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">Section 5</div>
+    <h2>What Moves Off Your Plate</h2>
+    <p>Starting Day 1 of the pilot, you stop doing these things:</p>
+    <div class="off-plate-grid">
+      <div class="off-plate-card">
+        <h4>Support</h4>
+        <ul>
+          <li>First response to every ticket</li>
+          <li>Answering "have you tried..." questions</li>
+          <li>Responding to billing questions</li>
+          <li>Re-reading old threads for context</li>
+        </ul>
+      </div>
+      <div class="off-plate-card">
+        <h4>Sales</h4>
+        <ul>
+          <li>Manual prospect research</li>
+          <li>Writing first-touch outreach</li>
+          <li>Managing the follow-up sequence</li>
+          <li>CRM entry and updates</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>You stay responsible for:</strong> Responding to escalations within 24 business hours. Approving new outreach templates. Product decisions. Closing high-value deals.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">Section 6</div>
+    <h2>Decision Threshold Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Decision Type</th>
+          <th>Agent acts alone</th>
+          <th>Agent flags first</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Support response, Tier-1</td><td>✓ Within template</td><td></td></tr>
+        <tr><td>Refund under $50</td><td>✓</td><td></td></tr>
+        <tr><td>Refund $50+</td><td></td><td>✓ Always</td></tr>
+        <tr><td>Outreach email send</td><td>✓ Within approved templates</td><td></td></tr>
+        <tr><td>New outreach template type</td><td></td><td>✓ Always</td></tr>
+        <tr><td>Deal follow-up</td><td>✓ Via 3-touch sequence</td><td></td></tr>
+        <tr><td>3+ touches, no response</td><td></td><td>✓ Founder decides next move</td></tr>
+        <tr><td>Social post</td><td></td><td>✓ All posts, always</td></tr>
+        <tr><td>Bug report triage</td><td></td><td>✓ Always</td></tr>
+        <tr><td>Churn-risk conversation</td><td></td><td>✓ Immediate</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-number">Section 7</div>
+    <h2>Pilot Scope &amp; Guarantee</h2>
+    <table>
+      <tbody>
+        <tr><td><strong>Agents activated</strong></td><td>Sales Agent, Support Agent</td></tr>
+        <tr><td><strong>Pilot duration</strong></td><td>30 days</td></tr>
+        <tr><td><strong>Pilot fee</strong></td><td>$1,500–$2,500 (scoped to your setup complexity)</td></tr>
+        <tr><td><strong>Ongoing rate if you continue</strong></td><td>$3,500–$5,000/month for both agents</td></tr>
+        <tr><td><strong>Kickoff</strong></td><td>Within 5 business days of signing</td></tr>
+        <tr><td><strong>Day 7 check-in</strong></td><td>We review success criteria together. If we're off-track, we adjust before you're asked to commit to month 2.</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:14px; color: var(--gray-600);">The pilot guarantee: if Day 7 criteria aren't met, we identify the root cause within 2 business days and adjust scope — no charge until the agent is performing to spec.</p>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Note:</strong> This is a sample Blueprint built to show the format and depth of what we produce. The founder profile is illustrative; the agents, decision thresholds, and success criteria are exactly what a real Blueprint contains. Your Blueprint is written entirely for your company — different agents, different tools, different thresholds — based on your specific situation.
+  </div>
+
+  <div class="cta-block">
+    <h2>Get your Blueprint in 45 minutes.</h2>
+    <p>You keep the document regardless of what you decide. No pitch, no pressure — just a clear picture of what your AI company looks like.</p>
+    <a href="mailto:m6r.pulse@gmail.com?subject=Blueprint%20Session%20Request" class="cta-btn">Request a Blueprint Session →</a>
+    <p class="cta-sub">Responds within 24 hours &nbsp;·&nbsp; Free to you &nbsp;·&nbsp; No obligation</p>
+  </div>
+
+</div>
+</body>
+</html>
